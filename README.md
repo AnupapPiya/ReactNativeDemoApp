@@ -1,50 +1,110 @@
-# Welcome to your Expo app 👋
+# ReactNativeDemoApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native demo application built with Expo, featuring tab-based navigation, theming, and clean architecture patterns.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **React Native with Expo**: Cross-platform mobile development with Expo
+- **Expo Router**: File-based routing with tab navigation
+- **TypeScript**: Type-safe development experience
+- **Theming System**: Centralized theme configuration for consistent styling
+- **Tab Navigation**: Built-in tab navigation using Expo Router
+- **Modern UI**: Clean and intuitive user interface
+- **Platform Support**: iOS and Android support
 
+## Requirements
+
+- Node.js 18.x or later
+- npm or yarn
+- Expo CLI
+- For iOS development: macOS with Xcode
+- For Android development: Android Studio
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:AnupapPiya/ReactNativeDemoApp.git
+   cd ReactNativeDemoApp
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
+   # or
+   yarn install
    ```
 
-2. Start the app
-
+3. Start the development server:
    ```bash
    npx expo start
+   # or
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+## Usage
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. After starting the development server, you can:
+   - Press `i` to open in iOS simulator
+   - Press `a` to open in Android emulator
+   - Scan the QR code with Expo Go app on your physical device
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+2. Navigate through the app using the tab navigation at the bottom.
 
-## Get a fresh project
+3. The app demonstrates various React Native features and patterns.
 
-When you're ready, run:
+## Project Structure
 
-```bash
-npm run reset-project
+```
+ReactNativeDemoApp/
+├── app/                    # Expo Router app directory
+│   ├── (tabs)/            # Tab navigation group
+│   │   └── index.tsx      # Home/Index tab screen
+│   └── detail.tsx         # Detail screen
+├── constants/             # App constants
+│   └── theme.ts          # Theme configuration
+└── ...
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Architecture
 
-## Learn more
+The app follows a clean and organized structure:
 
-To learn more about developing your project with Expo, look at the following resources:
+- **App Directory**: `app/` contains screens and navigation structure using Expo Router
+- **Constants**: `constants/` contains shared constants and configuration (e.g., theme)
+- **Components**: Reusable UI components
+- **Navigation**: File-based routing with Expo Router
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Development
 
-## Join the community
+### Running on iOS Simulator
+```bash
+npm run ios
+```
 
-Join our community of developers creating universal apps.
+### Running on Android Emulator
+```bash
+npm run android
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Building for Production
+
+#### iOS
+```bash
+npm run build:ios
+```
+
+#### Android
+```bash
+npm run build:android
+```
+
+## Screenshots
+
+| Home Screen |
+| --- |
+| ![Home Screen](Screenshot/HomeScreen.png) |
+
+## License
+
+This project is open source and available under the MIT License.
